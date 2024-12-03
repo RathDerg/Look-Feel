@@ -1,13 +1,16 @@
 import java.util.Scanner;
 
 public class ProgramaMain {
-
+    private static GestorProductos gestor = new GestorProductos();
+    private static boolean flag = false;
+    
     public static void main(String[] args) {
         Scanner sc = new Scanner (System.in);
-        String [] opcionesPrincipal = {"Agregar y modificar productos.", "Controlar stock, precios y liquidaciones.", "Salir del programa."};
-        String [] opcionesAgregar = {"Añadir productos.", "Modificar productos.", "Imprimir datos de productos.", "Salir al menú principal."};
+        String [] opcionesPrincipal = {"Agregar / Modificar datos de los productos.", "Controlar stock, precios y liquidaciones.", "Salir del programa."};
+        String [] opcionesAgregar = {"Añadir productos.", "Modificar datos de los productos.", "Imprimir datos de productos.", "Salir al menú principal."};
         String [] opcionesStock = {"Añadir / Restar stock de un producto.", "Modificar precio.", "Manejar liquidaciones.", "Salir al menú principal."};
     
+        gestor.inicio();
         menuPrincipal(opcionesPrincipal, opcionesAgregar, opcionesStock, sc);
     
         sc.close();
@@ -58,13 +61,26 @@ public class ProgramaMain {
             opcion=datoInt(sc);
             System.out.println("---------------------------------");
             switch (opcion){
-                case 1: System.out.println("Opcion 1.");
+                case 1: if (!flag){   
+                            System.out.println("Accediendo a agregar objetos...");
+                            flag = true;
+                        } else{
+                            System.out.println("Los productos ya han sido añadidos.");
+                        }
                     break;
-                case 2: System.out.println("Opcion 2.");
+                case 2: if (flag){
+                            System.out.println("Accediendo a modificar datos de los productos..");
+                        } else {
+                            System.out.println("No hay productos que modificar. Añádalos para poder operar.");
+                        }
                     break;
-                case 3: System.out.println("Opcion 3");
+                case 3: if (flag){
+                            System.out.println("Opcion 3.");
+                        } else {
+                            System.out.println("No hay productos en el armario. Añádalos para poder operar.");
+                        }
                     break;
-                case 4: System.out.println("Vovliendo al menú principal...");
+                case 4: System.out.println("Volviendo al menú principal...");
                     break;
                 default: System.out.println("La opción no es válida.");
                     break;
@@ -88,13 +104,25 @@ public class ProgramaMain {
             opcion=datoInt(sc);
             System.out.println("---------------------------------");
             switch (opcion){
-                case 1: System.out.println("Opcion 1.");
+                case 1: if (flag){
+                            System.out.println("Opcion 1.");
+                        } else {
+                            System.out.println("No hay productos en el armario. Añádalos para poder operar.");
+                        }
                     break;
-                case 2: System.out.println("Opcion 2.");
+                case 2: if (flag){
+                            System.out.println("Opcion 2.");
+                        } else {
+                            System.out.println("No hay productos en el armario. Añádalos para poder operar.");
+                        }
                     break;
-                case 3: System.out.println("Opcion 3");
+                case 3: if (flag){
+                            System.out.println("Opcion 3.");
+                        } else {
+                            System.out.println("No hay productos en el armario. Añádalos para poder operar.");
+                        }
                     break;
-                case 4: System.out.println("Vovliendo al menú principal...");
+                case 4: System.out.println("Volviendo al menú principal...");
                     break;
                 default: System.out.println("La opción no es válida.");
                     break;
