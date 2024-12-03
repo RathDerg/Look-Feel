@@ -12,7 +12,7 @@ to control the whole shop: Add products and modify their attributes in case need
 
 
 /// ESPAÑOL ///
-¡Hey, somos Jose y patricia trabajando juntos!
+¡Hey, somos Jose y Patricia trabajando juntos!
 
 ¿Qué estamos haciendo?
 Estamos trabajando en un pequeño reto, una tienda local de ropa llamada "Look & Feel" ha decidido modernizarse y su jefe nos ha pedido que trabajemos con un programa en Java con el que pueda controlar y manejar sus productos,
