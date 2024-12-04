@@ -70,7 +70,7 @@ public class Camiseta {
 
     public String imprimirDetalles () {
 
-        return "La camiseta es de tipo " + tipo + ", de la talla: " + talla + ", del color: " + color + ", existe un stock de: " +  cantidad + ", con un precio de: " + precio + "euros";
+        return "La camiseta es de tipo " + tipo + ", de la talla: " + talla + ", del color: " + color + ", existe un stock de: " +  cantidad + ", con un precio de: " + precio + " euros";
 
     }
 

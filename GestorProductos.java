@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 public class GestorProductos {
-    private Chaqueta [] chaquetas = new Chaqueta[5];
-    private Camiseta [] camisetas= new Camiseta[5];
-    private Pantalon [] pantalones = new Pantalon[5];
-    private Zapato [] zapatos = new Zapato[5];
+    private Chaqueta [] chaquetas = new Chaqueta[1];
+    private Camiseta [] camisetas= new Camiseta[1];
+    private Pantalon [] pantalones = new Pantalon[1];
+    private Zapato [] zapatos = new Zapato[1];
     private String [] menuObjetos = {"Chaquetas.", "Camisetas.", "Pantalones.", "Zapatos.", "Volver al menú."};
     private String [] atributosObjetos = {"Tipo.", "Color.", "Talla."};
 
@@ -38,13 +38,13 @@ public class GestorProductos {
             System.out.println("--- Chaqueta " + (i+1) + " ---");
             System.out.println("-------------------------------");
             System.out.print("Tipo de la chaqueta: ");
-            chaquetas[i].setTipo(sc.next());
+            chaquetas[i].setTipo(sc.nextLine());
             System.out.println("-------------------------------");
             System.out.print("Color de la chaqueta: ");
-            chaquetas[i].setColor(sc.next());
+            chaquetas[i].setColor(sc.nextLine());
             System.out.println("-------------------------------");
             System.out.print("Talla de la chaqueta: ");
-            chaquetas[i].setTalla(sc.next());
+            chaquetas[i].setTalla(sc.nextLine());
             System.out.println("-------------------------------");
             System.out.print("Cantidad de la chaqueta: ");
             chaquetas[i].setCantidad(sc.nextInt());
@@ -59,13 +59,13 @@ public class GestorProductos {
             System.out.println("--- Camiseta " + (i+1) + " ---");
             System.out.println("-------------------------------");
             System.out.print("Tipo de la camiseta: ");
-            camisetas[i].setTipo(sc.next());
+            camisetas[i].setTipo(sc.nextLine());
             System.out.println("-------------------------------");
             System.out.print("Color de la camiseta: ");
-            camisetas[i].setColor(sc.next());
+            camisetas[i].setColor(sc.nextLine());
             System.out.println("-------------------------------");
             System.out.print("Talla de la camiseta: ");
-            camisetas[i].setTalla(sc.next());
+            camisetas[i].setTalla(sc.nextLine());
             System.out.println("-------------------------------");
             System.out.print("Cantidad de la camiseta: ");
             camisetas[i].setCantidad(sc.nextInt());
@@ -80,13 +80,13 @@ public class GestorProductos {
             System.out.println("--- Pantalón " + (i+1) + " ---");
             System.out.println("-------------------------------");
             System.out.print("Tipo del pantalón: ");
-            pantalones[i].setTipo(sc.next());
+            pantalones[i].setTipo(sc.nextLine());
             System.out.println("-------------------------------");
             System.out.print("Color del pantalón: ");
-            pantalones[i].setColor(sc.next());
+            pantalones[i].setColor(sc.nextLine());
             System.out.println("-------------------------------");
             System.out.print("Talla del pantalón: ");
-            pantalones[i].setTalla(sc.next());
+            pantalones[i].setTalla(sc.nextLine());
             System.out.println("-------------------------------");
             System.out.print("Cantidad del pantalón: ");
             pantalones[i].setCantidad(sc.nextInt());
@@ -101,13 +101,13 @@ public class GestorProductos {
             System.out.println("--- Par de zapatos " + (i+1) + " ---");
             System.out.println("-------------------------------");
             System.out.print("Tipo de los zapatos: ");
-            zapatos[i].setTipo(sc.next());
+            zapatos[i].setTipo(sc.nextLine());
             System.out.println("-------------------------------");
             System.out.print("Color de los zapatos: ");
-            zapatos[i].setColor(sc.next());
+            zapatos[i].setColor(sc.nextLine());
             System.out.println("-------------------------------");
             System.out.print("Talla de los zapatos: ");
-            zapatos[i].setTalla(sc.next());
+            zapatos[i].setTalla(sc.nextLine());
             System.out.println("-------------------------------");
             System.out.print("Cantidad de los zapatos(en pares): ");
             zapatos[i].setCantidad(sc.nextInt());
@@ -116,6 +116,7 @@ public class GestorProductos {
             zapatos[i].setPrecio(sc.nextDouble());
             System.out.println("-------------------------------");      
         }
+        System.out.println("--- PRODUCTOS AÑADIDOS ---");
     }
 
     /** JD modificarProductos
@@ -126,6 +127,7 @@ public class GestorProductos {
      */
     protected void modificarProductos (Scanner sc){
         int opcion=0, opcion2=0, opcion3 = 0;
+        System.out.println("---------------------------------");
         do{
             System.out.println("¿Qué tipo de prenda quieres modificar?");
             for (int i = 0 ; i<menuObjetos.length ; i++){
@@ -133,6 +135,7 @@ public class GestorProductos {
             }
             System.out.print("Opción: ");
             opcion = sc.nextInt();
+            System.out.println("---------------------------------");
             switch (opcion) {
                 case 1: // Para las chaquetas.
                     do{
@@ -141,6 +144,7 @@ public class GestorProductos {
                         }
                         System.out.print("Opción: ");
                         opcion2 = sc.nextInt();
+                        System.out.println("---------------------------------");
                         if (opcion2<1 || opcion2>chaquetas.length){
                             System.out.println("La opción no es válida.");
                         }
@@ -149,22 +153,24 @@ public class GestorProductos {
                         atributos();
                         System.out.print("Opción: ");
                         opcion3 = sc.nextInt();
+                        System.out.println("---------------------------------");
                             switch (opcion3) {
                                 case 1: sc.nextLine();
                                         System.out.println("Tipo actual: "+chaquetas[(opcion2-1)].getTipo());
-                                        chaquetas[(opcion2-1)].setTipo(sc.next());
+                                        chaquetas[(opcion2-1)].setTipo(sc.nextLine());
                                     break;
                                 case 2: sc.nextLine();
                                         System.out.println("Color actual: "+chaquetas[(opcion2-1)].getColor());
-                                        chaquetas[(opcion2-1)].setColor(sc.next());
+                                        chaquetas[(opcion2-1)].setColor(sc.nextLine());
                                     break;
                                 case 3: sc.nextLine();
                                         System.out.println("Talla actual: "+chaquetas[(opcion2-1)].getTalla());
-                                         chaquetas[(opcion2-1)].setTalla(sc.next());
+                                         chaquetas[(opcion2-1)].setTalla(sc.nextLine());
                                     break;
                                 default:System.out.println("La opción no es válida.");
                                     break;
                             }
+                            System.out.println("---------------------------------");
                     } while(opcion3<1 || opcion3>atributosObjetos.length);
                     break;
                 case 2: // Para Camisetas
@@ -174,6 +180,7 @@ public class GestorProductos {
                         }
                         System.out.print("Opción: ");
                         opcion2 = sc.nextInt();
+                        System.out.println("---------------------------------");
                         if (opcion2<1 || opcion2>camisetas.length){
                             System.out.println("La opción no es válida.");
                         }
@@ -182,6 +189,7 @@ public class GestorProductos {
                         atributos();
                         System.out.print("Opción: ");
                         opcion3 = sc.nextInt();
+                        System.out.println("---------------------------------");
                             switch (opcion3) {
                                 case 1: sc.nextLine();
                                         System.out.println("Tipo actual: "+camisetas[(opcion2-1)].getTipo());
@@ -198,6 +206,7 @@ public class GestorProductos {
                                 default:System.out.println("La opción no es válida.");
                                     break;
                             }
+                            System.out.println("---------------------------------");
                     } while(opcion3<1 || opcion3>atributosObjetos.length);
                     break;
                 case 3: // Para Pantalones
@@ -207,6 +216,7 @@ public class GestorProductos {
                         }
                         System.out.print("Opción: ");
                         opcion2 = sc.nextInt();
+                        System.out.println("---------------------------------");
                         if (opcion2<1 || opcion2>chaquetas.length){
                             System.out.println("La opción no es válida.");
                         }
@@ -215,6 +225,7 @@ public class GestorProductos {
                         atributos();
                         System.out.print("Opción: ");
                         opcion3 = sc.nextInt();
+                        System.out.println("---------------------------------");
                             switch (opcion3) {
                                 case 1: sc.nextLine();
                                         System.out.println("Tipo actual: "+chaquetas[(opcion2-1)].getTipo());
@@ -231,6 +242,7 @@ public class GestorProductos {
                                 default:System.out.println("La opción no es válida.");
                                     break;
                             }
+                            System.out.println("---------------------------------");
                     } while(opcion3<1 || opcion3>atributosObjetos.length);
                     break;
                 case 4: // Para Zapatos
@@ -240,6 +252,7 @@ public class GestorProductos {
                         }
                         System.out.print("Opción: ");
                         opcion2 = sc.nextInt();
+                        System.out.println("---------------------------------");
                         if (opcion2<1 || opcion2>zapatos.length){
                             System.out.println("La opción no es válida.");
                         }
@@ -248,6 +261,7 @@ public class GestorProductos {
                         atributos();
                         System.out.print("Opción: ");
                         opcion3 = sc.nextInt();
+                        System.out.println("---------------------------------");
                             switch (opcion3) {
                                 case 1: sc.nextLine();
                                         System.out.println("Tipo actual: "+zapatos[(opcion2-1)].getTipo());
@@ -264,6 +278,7 @@ public class GestorProductos {
                                 default:System.out.println("La opción no es válida.");
                                     break;
                             }
+                            System.out.println("---------------------------------");
                     } while(opcion3<1 || opcion3>atributosObjetos.length);
                     break;
                 case 5: System.out.println("Volviendo al menú...");
@@ -271,6 +286,7 @@ public class GestorProductos {
                 default: System.out.println("La opción no es válida.");
                     break;
                 }
+                System.out.println("---------------------------------");
         }while (opcion!=5);
     }
 
@@ -299,6 +315,7 @@ public class GestorProductos {
         }
         System.out.print("Opción: ");
         opcion = sc.nextInt();
+        System.out.println("---------------------------------");
         switch (opcion) {
             case 1 : for (int i = 0; i <chaquetas.length; i++){
                 System.out.println((i+1) + ". " + chaquetas[i].imprimirDetalles());
@@ -337,6 +354,7 @@ public class GestorProductos {
             default: System.out.println("Opción no válida");
                 break;
             }
+            System.out.println("---------------------------------");
         } while (opcion!=5);
     }
 
@@ -356,6 +374,7 @@ public class GestorProductos {
         }
         System.out.print("Opción: ");
         opcion = sc.nextInt();
+        System.out.println("---------------------------------");
         switch (opcion) {
             case 1 : for (int i = 0; i <chaquetas.length; i++){
                 System.out.println((i+1) + ". " + chaquetas[i].imprimirDetalles());
@@ -394,11 +413,13 @@ public class GestorProductos {
             default: System.out.println("Opción no válida");
                 break;
             }
+            System.out.println("---------------------------------");
         } while (opcion!=5);
     }
 
     protected void obtenerDetalles(Scanner sc){
         int opcion = 0;
+        System.out.println("---------------------------------");
         do {
             System.out.println("De qué tipo de producto quieres conocer los detalles?");
             for (int i = 0; i<menuObjetos.length;i++) {
@@ -406,6 +427,7 @@ public class GestorProductos {
             }
             System.out.print("Opción: ");
             opcion = sc.nextInt();
+            System.out.println("---------------------------------");
             switch (opcion) {
                 case 1 : for (int i = 0; i <chaquetas.length; i++){
                             System.out.println((i+1) + ". " + chaquetas[i].imprimirDetalles());
@@ -428,6 +450,7 @@ public class GestorProductos {
                 default: System.out.println("La opción no es válida.");
                     break;
             }
+            System.out.println("---------------------------------");
         } while (opcion!=5);
     }
 }

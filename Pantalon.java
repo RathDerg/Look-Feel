@@ -58,7 +58,7 @@ public class Pantalon {
 
     public String imprimirDetalles () {
 
-        return "El pantalón es de tipo " + tipo + ", de la talla: " + talla + ", del color: " + color + ", existe un stock de: " +  cantidad + ", con un precio de: " + precio + "euros";
+        return "El pantalón es de tipo " + tipo + ", de la talla: " + talla + ", del color: " + color + ", existe un stock de: " +  cantidad + ", con un precio de: " + precio + " euros";
 
     }
 

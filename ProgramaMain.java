@@ -31,11 +31,9 @@ public class ProgramaMain {
             opcion=datoInt(sc);
             System.out.println("---------------------------------");
             switch (opcion){
-                case 1: System.out.println("Opcion 1.");
-                        menuAgregar(opcionesAgregar, sc);
+                case 1: menuAgregar(opcionesAgregar, sc);
                     break;
-                case 2: System.out.println("Opcion 2.");
-                        menuStock(opcionesStock, sc);
+                case 2: menuStock(opcionesStock, sc);
                     break;
                 case 3: System.out.println("Saliendo del programa...");
                     break;
