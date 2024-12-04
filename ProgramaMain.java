@@ -8,7 +8,7 @@ public class ProgramaMain {
         Scanner sc = new Scanner (System.in);
         String [] opcionesPrincipal = {"Agregar / Modificar datos de los productos.", "Controlar stock, precios y liquidaciones.", "Salir del programa."};
         String [] opcionesAgregar = {"Añadir productos.", "Modificar datos de los productos.", "Imprimir datos de productos.", "Salir al menú principal."};
-        String [] opcionesStock = {"Añadir / Restar stock de un producto.", "Modificar precio.", "Manejar liquidaciones.", "Salir al menú principal."};
+        String [] opcionesStock = {"Modificar stock de un producto.", "Modificar precio de un producto.", "Manejar descuentos.", "Salir al menú principal."};
     
         gestor.inicio();
         menuPrincipal(opcionesPrincipal, opcionesAgregar, opcionesStock, sc);
@@ -63,6 +63,7 @@ public class ProgramaMain {
             switch (opcion){
                 case 1: if (!flag){   
                             System.out.println("Accediendo a agregar objetos...");
+                            gestor.agregarProductos(sc);
                             flag = true;
                         } else{
                             System.out.println("Los productos ya han sido añadidos.");
@@ -70,12 +71,14 @@ public class ProgramaMain {
                     break;
                 case 2: if (flag){
                             System.out.println("Accediendo a modificar datos de los productos..");
+                            gestor.modificarProductos(sc);
                         } else {
                             System.out.println("No hay productos que modificar. Añádalos para poder operar.");
                         }
                     break;
                 case 3: if (flag){
-                            System.out.println("Opcion 3.");
+                            System.out.println("Accediendo a ver los detalles...");
+                            gestor.obtenerDetalles(sc);
                         } else {
                             System.out.println("No hay productos en el armario. Añádalos para poder operar.");
                         }
@@ -105,19 +108,21 @@ public class ProgramaMain {
             System.out.println("---------------------------------");
             switch (opcion){
                 case 1: if (flag){
-                            System.out.println("Opcion 1.");
+                            System.out.println("Accediendo a modificar el stock...");
+                            gestor.modificarCantidad(sc);
                         } else {
                             System.out.println("No hay productos en el armario. Añádalos para poder operar.");
                         }
                     break;
                 case 2: if (flag){
-                            System.out.println("Opcion 2.");
+                            System.out.println("Accediendo a modificar el precio...");
+                            gestor.modificarPrecio(sc);
                         } else {
                             System.out.println("No hay productos en el armario. Añádalos para poder operar.");
                         }
                     break;
                 case 3: if (flag){
-                            System.out.println("Opcion 3.");
+                            System.out.println("Esta opción no está disponible actualmente.");
                         } else {
                             System.out.println("No hay productos en el armario. Añádalos para poder operar.");
                         }

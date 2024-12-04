@@ -121,7 +121,7 @@ public class GestorProductos {
     /** JD modificarProductos
      * Este método, cuando se le llame, pedirá al usuario varias opciones, siendo estas mostradas por consola. Según navegue el usuario, este
      * podrá modificar tres parámetros en esta opción los cuales son: Tipo, Talla y Color. También se incluirá la opción de volver al menú
-     * previo en caso de no querer modificar nada.
+     * previo en caso de no querer modificar nada. Este método se repetirá hasta que el usuario decida querer salir de esta opción.
      * @param sc Variable Scanner traída desde el ProgramaMain.
      */
     protected void modificarProductos (Scanner sc){
@@ -271,7 +271,7 @@ public class GestorProductos {
                 default: System.out.println("La opción no es válida.");
                     break;
                 }
-        }while (opcion<1 || opcion>menuObjetos.length);
+        }while (opcion!=5);
     }
 
     /** JD atributos
@@ -281,5 +281,153 @@ public class GestorProductos {
         for (int i = 0 ; i<atributosObjetos.length ; i++){
             System.out.println((i+1)+". "+atributosObjetos[i]);
         }
+    }
+
+    /** JD modificarPrecio
+     * Preguntamos al usuario de qué producto quiere modificar el precio, para ello recorremos el array 
+     * de objetos para mostrar los tipos de productos. Después en cada opción, se escoge el producto
+     * concreto a modificar su precio, llamando al método setPrecio. 
+     * @param sc variable Scanner traída del main.
+     */
+    protected void modificarPrecio(Scanner sc) {
+        int opcion = 0;
+    
+        do {
+        System.out.println("De qué tipo de producto quieres modificar el precio?");
+        for (int i = 0; i<menuObjetos.length;i++) {
+            System.out.println((i+1) + ". " + menuObjetos[i]);
+        }
+        System.out.print("Opción: ");
+        opcion = sc.nextInt();
+        switch (opcion) {
+            case 1 : for (int i = 0; i <chaquetas.length; i++){
+                System.out.println((i+1) + ". " + chaquetas[i].imprimirDetalles());
+                }
+                System.out.print("Opción: ");
+                opcion= sc.nextInt();
+                System.out.print("¿Nuevo precio?");
+                chaquetas[opcion-1].setPrecio(sc.nextDouble());
+                break;
+            case 2 : for (int i = 0; i<camisetas.length; i++){
+                System.out.println((i+1) + ". " + camisetas[i].imprimirDetalles());
+                }
+                System.out.print("Opción: ");
+                opcion= sc.nextInt();
+                System.out.print("¿Nuevo precio?");
+                camisetas[opcion-1].setPrecio(sc.nextDouble());
+                break;
+            case 3 : for (int i = 0; i<pantalones.length; i++){
+                System.out.println((i+1) + ". " + pantalones[i].imprimirDetalles());
+                }
+                System.out.print("Opción: ");
+                opcion= sc.nextInt();
+                System.out.print("¿Nuevo precio?");
+                pantalones[opcion-1].setPrecio(sc.nextDouble());
+                break;
+            case 4 : for (int i = 0 ; i<zapatos.length; i++) {
+                System.out.println((i+1) + ". " + zapatos[i].imprimirDetalles());
+                }
+                System.out.print("Opción: ");
+                opcion= sc.nextInt();
+                System.out.print("¿Nuevo precio?");
+                zapatos[opcion-1].setPrecio(sc.nextDouble());
+                break;
+            case 5: System.out.println("Volviendo a menú anterior");
+                break;
+            default: System.out.println("Opción no válida");
+                break;
+            }
+        } while (opcion!=5);
+    }
+
+    /** JD modificarCantidad
+     * Preguntamos al usuario de qué producto quiere modificar la cantidad, para ello recorremos el array 
+     * de objetos para mostrar los tipos de productos. Después en cada opción, se escoge el producto
+     * concreto a modificar su cantidad, llamando al método setCantidad.
+     * @param sc variable Scanner traída del main
+     */
+    protected void modificarCantidad(Scanner sc) {
+        int opcion = 0;
+    
+        do {
+        System.out.println("De qué tipo de producto quieres modificar el precio?");
+        for (int i = 0; i<menuObjetos.length;i++) {
+            System.out.println((i+1) + ". " + menuObjetos[i]);
+        }
+        System.out.print("Opción: ");
+        opcion = sc.nextInt();
+        switch (opcion) {
+            case 1 : for (int i = 0; i <chaquetas.length; i++){
+                System.out.println((i+1) + ". " + chaquetas[i].imprimirDetalles());
+                }
+                System.out.print("Opción: ");
+                opcion= sc.nextInt();
+                System.out.print("¿Cantidad actual del producto?");
+                chaquetas[opcion-1].setCantidad(sc.nextInt());
+                break;
+            case 2 : for (int i = 0; i<camisetas.length; i++){
+                System.out.println((i+1) + ". " + camisetas[i].imprimirDetalles());
+                }
+                System.out.print("Opción: ");
+                opcion= sc.nextInt();
+                System.out.print("¿Cantidad actual del producto?");
+                camisetas[opcion-1].setCantidad(sc.nextInt());
+                break;
+            case 3 : for (int i = 0; i<pantalones.length; i++){
+                System.out.println((i+1) + ". " + pantalones[i].imprimirDetalles());
+                }
+                System.out.print("Opción: ");
+                opcion= sc.nextInt();
+                System.out.print("¿Cantidad actual del producto?");
+                pantalones[opcion-1].setCantidad(sc.nextInt());
+                break;
+            case 4 : for (int i = 0 ; i<zapatos.length; i++) {
+                System.out.println((i+1) + ". " + zapatos[i].imprimirDetalles());
+                }
+                System.out.print("Opción: ");
+                opcion= sc.nextInt();
+                System.out.print("¿Cantidad actual del producto?");
+                zapatos[opcion-1].setCantidad(sc.nextInt());
+                break;
+            case 5: System.out.println("Volviendo a menú anterior");
+                break;
+            default: System.out.println("Opción no válida");
+                break;
+            }
+        } while (opcion!=5);
+    }
+
+    protected void obtenerDetalles(Scanner sc){
+        int opcion = 0;
+        do {
+            System.out.println("De qué tipo de producto quieres conocer los detalles?");
+            for (int i = 0; i<menuObjetos.length;i++) {
+                System.out.println((i+1) + ". " + menuObjetos[i]);
+            }
+            System.out.print("Opción: ");
+            opcion = sc.nextInt();
+            switch (opcion) {
+                case 1 : for (int i = 0; i <chaquetas.length; i++){
+                            System.out.println((i+1) + ". " + chaquetas[i].imprimirDetalles());
+                        }
+                    break;
+                case 2 : for (int i = 0; i <camisetas.length; i++){
+                            System.out.println((i+1) + ". " + camisetas[i].imprimirDetalles());
+                        }
+                    break;
+                case 3 : for (int i = 0; i <pantalones.length; i++){
+                            System.out.println((i+1) + ". " + pantalones[i].imprimirDetalles());
+                        }
+                    break;
+                case 4 : for (int i = 0; i <zapatos.length; i++){
+                            System.out.println((i+1) + ". " + zapatos[i].imprimirDetalles());
+                        }
+                    break;
+                case 5: System.out.println("Volviendo al menú anterior.");
+                    break;
+                default: System.out.println("La opción no es válida.");
+                    break;
+            }
+        } while (opcion!=5);
     }
 }
