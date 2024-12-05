@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 public class GestorProductos {
-    private Chaqueta [] chaquetas = new Chaqueta[1];
-    private Camiseta [] camisetas= new Camiseta[1];
-    private Pantalon [] pantalones = new Pantalon[1];
-    private Zapato [] zapatos = new Zapato[1];
+    private Chaqueta [] chaquetas = new Chaqueta[5];
+    private Camiseta [] camisetas= new Camiseta[5];
+    private Pantalon [] pantalones = new Pantalon[5];
+    private Zapato [] zapatos = new Zapato[5];
     private String [] menuObjetos = {"Chaquetas.", "Camisetas.", "Pantalones.", "Zapatos.", "Volver al menú."};
     private String [] atributosObjetos = {"Tipo.", "Color.", "Talla."};
 
@@ -32,6 +32,7 @@ public class GestorProductos {
      * @param sc Variable Scanner traída desde el ProgramaMain. 
      */
     protected void agregarProductos (Scanner sc){
+        System.out.println("--- Su armario dispone de 5 huecos para cada tipo de ropa: Chaquetas, Camisetas, Pantalones y Zapatos. ---");
         for (int i = 0 ; i < chaquetas.length ; i++){
             sc.nextLine();
             System.out.println("-------------------------------");
