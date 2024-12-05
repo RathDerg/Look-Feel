@@ -58,7 +58,7 @@ public class Zapato {
     
     public String imprimirDetalles () {
 
-        return "Los zapatos son de tipo " + tipo + ", de la talla: " + talla + ", del color: " + color + ", existe un stock de: " +  cantidad + ", con un precio de: " + precio + "euros";
+        return "Los zapatos son de tipo " + tipo + ", de la talla: " + talla + ", del color: " + color + ", existe un stock de: " +  cantidad + ", con un precio de: " + precio + " euros";
 
     }
 

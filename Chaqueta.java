@@ -70,7 +70,7 @@ public class Chaqueta {
 
     public String imprimirDetalles () {
 
-        return "La chaqueta es de tipo " + tipo + ", de la talla: " + talla + ", del color: " + color + ", existe un stock de: " +  cantidad + ", con un precio de: " + precio + "euros";
+        return "La chaqueta es de tipo " + tipo + ", de la talla: " + talla + ", del color: " + color + ", existe un stock de: " +  cantidad + ", con un precio de: " + precio + " euros";
 
     }
 
