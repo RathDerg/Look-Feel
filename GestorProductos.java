@@ -418,11 +418,17 @@ public class GestorProductos {
         } while (opcion!=5);
     }
 
+    /** JD obtenerDetalles
+     * Este método se llamará desde el ProgramaMain, donde este realiza la función de imprimir todo el armario de un tipo de prenda o todo
+     * el armario de prendas que dispone. A este método no se puede acceder si previamente no se han añadido los datos de los productos/clases.
+     * @param sc Variable Scanner traída desde el ProgramaMain.
+     */
     protected void obtenerDetalles(Scanner sc){
         int opcion = 0;
         System.out.println("---------------------------------");
         do {
             System.out.println("De qué tipo de producto quieres conocer los detalles?");
+            System.out.println("0. Imprimir todos los productos.");
             for (int i = 0; i<menuObjetos.length;i++) {
                 System.out.println((i+1) + ". " + menuObjetos[i]);
             }
@@ -430,6 +436,22 @@ public class GestorProductos {
             opcion = sc.nextInt();
             System.out.println("---------------------------------");
             switch (opcion) {
+                case 0: for (int i = 0; i <chaquetas.length; i++){
+                            System.out.println((i+1) + ". " + chaquetas[i].imprimirDetalles());
+                        }
+                        System.out.println("---------------------------------");
+                        for (int i = 0; i <camisetas.length; i++){
+                            System.out.println((i+1) + ". " + camisetas[i].imprimirDetalles());
+                        }
+                        System.out.println("---------------------------------");
+                        for (int i = 0; i <pantalones.length; i++){
+                            System.out.println((i+1) + ". " + pantalones[i].imprimirDetalles());
+                        }
+                        System.out.println("---------------------------------");
+                        for (int i = 0; i <zapatos.length; i++){
+                            System.out.println((i+1) + ". " + zapatos[i].imprimirDetalles());
+                        }
+                    break;
                 case 1 : for (int i = 0; i <chaquetas.length; i++){
                             System.out.println((i+1) + ". " + chaquetas[i].imprimirDetalles());
                         }

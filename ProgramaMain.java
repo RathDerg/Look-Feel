@@ -8,7 +8,7 @@ public class ProgramaMain {
         Scanner sc = new Scanner (System.in);
         String [] opcionesPrincipal = {"Agregar / Modificar datos de los productos.", "Controlar stock, precios y liquidaciones.", "Salir del programa."};
         String [] opcionesAgregar = {"Añadir productos.", "Modificar datos de los productos.", "Imprimir datos de productos.", "Salir al menú principal."};
-        String [] opcionesStock = {"Modificar stock de un producto.", "Modificar precio de un producto.", "Manejar descuentos.", "Salir al menú principal."};
+        String [] opcionesStock = {"Modificar stock de un producto.", "Modificar precio de un producto.", "Salir al menú principal."};
     
         gestor.inicio();
         menuPrincipal(opcionesPrincipal, opcionesAgregar, opcionesStock, sc);
@@ -119,19 +119,13 @@ public class ProgramaMain {
                             System.out.println("No hay productos en el armario. Añádalos para poder operar.");
                         }
                     break;
-                case 3: if (flag){
-                            System.out.println("Esta opción no está disponible actualmente.");
-                        } else {
-                            System.out.println("No hay productos en el armario. Añádalos para poder operar.");
-                        }
-                    break;
-                case 4: System.out.println("Volviendo al menú principal...");
+                case 3: System.out.println("Volviendo al menú principal...");
                     break;
                 default: System.out.println("La opción no es válida.");
                     break;
             }
             System.out.println("---------------------------------");
-        } while (opcion != 4);  
+        } while (opcion != 3);  
     }
 
     public static int datoInt (Scanner sc){

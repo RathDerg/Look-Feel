@@ -9,16 +9,6 @@ public class Camiseta {
     public Camiseta() {
     }
 
-
-    public Camiseta(String tipo, String talla, int cantidad, double precio, String color) {
-        this.tipo = tipo;
-        this.talla = talla;
-        this.cantidad = cantidad;
-        this.precio = precio;
-        this.color = color;
-    }
-
-
     public String getTipo() {
         return tipo;
     }
