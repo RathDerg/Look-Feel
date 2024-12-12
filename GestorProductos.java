@@ -347,7 +347,7 @@ public class GestorProductos {
                 System.out.print("Opción: ");
                 opcion= sc.nextInt();
                 System.out.println("---------------------------------");
-                System.out.print("¿Nuevo precio?");
+                System.out.print("¿Nuevo precio? ");
                 chaquetas[opcion-1].setPrecio(sc.nextDouble());
                 break;
             case 2 : for (int i = 0; i<camisetas.length; i++){
@@ -357,7 +357,7 @@ public class GestorProductos {
                 System.out.print("Opción: ");
                 opcion= sc.nextInt();
                 System.out.println("---------------------------------");
-                System.out.print("¿Nuevo precio?");
+                System.out.print("¿Nuevo precio? ");
                 camisetas[opcion-1].setPrecio(sc.nextDouble());
                 break;
             case 3 : for (int i = 0; i<pantalones.length; i++){
@@ -367,7 +367,7 @@ public class GestorProductos {
                 System.out.print("Opción: ");
                 opcion= sc.nextInt();
                 System.out.println("---------------------------------");
-                System.out.print("¿Nuevo precio?");
+                System.out.print("¿Nuevo precio? ");
                 pantalones[opcion-1].setPrecio(sc.nextDouble());
                 break;
             case 4 : for (int i = 0 ; i<zapatos.length; i++) {
@@ -377,7 +377,7 @@ public class GestorProductos {
                 System.out.print("Opción: ");
                 opcion= sc.nextInt();
                 System.out.println("---------------------------------");
-                System.out.print("¿Nuevo precio?");
+                System.out.print("¿Nuevo precio? ");
                 zapatos[opcion-1].setPrecio(sc.nextDouble());
                 break;
             case 5: System.out.println("Volviendo a menú anterior");
@@ -415,7 +415,7 @@ public class GestorProductos {
                 System.out.print("Opción: ");
                 opcion= sc.nextInt();
                 System.out.println("---------------------------------");
-                System.out.print("¿Cantidad actual del producto?");
+                System.out.print("¿Cantidad actual del producto? ");
                 chaquetas[opcion-1].setCantidad(sc.nextInt());
                 break;
             case 2 : for (int i = 0; i<camisetas.length; i++){
@@ -425,7 +425,7 @@ public class GestorProductos {
                 System.out.print("Opción: ");
                 opcion= sc.nextInt();
                 System.out.println("---------------------------------");
-                System.out.print("¿Cantidad actual del producto?");
+                System.out.print("¿Cantidad actual del producto? ");
                 camisetas[opcion-1].setCantidad(sc.nextInt());
                 break;
             case 3 : for (int i = 0; i<pantalones.length; i++){
@@ -435,7 +435,7 @@ public class GestorProductos {
                 System.out.print("Opción: ");
                 opcion= sc.nextInt();
                 System.out.println("---------------------------------");
-                System.out.print("¿Cantidad actual del producto?");
+                System.out.print("¿Cantidad actual del producto? ");
                 pantalones[opcion-1].setCantidad(sc.nextInt());
                 break;
             case 4 : for (int i = 0 ; i<zapatos.length; i++) {
@@ -445,7 +445,7 @@ public class GestorProductos {
                 System.out.print("Opción: ");
                 opcion= sc.nextInt();
                 System.out.println("---------------------------------");
-                System.out.print("¿Cantidad actual del producto?");
+                System.out.print("¿Cantidad actual del producto? ");
                 zapatos[opcion-1].setCantidad(sc.nextInt());
                 break;
             case 5: System.out.println("Volviendo a menú anterior");
