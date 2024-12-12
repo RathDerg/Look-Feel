@@ -48,12 +48,11 @@ public class Zapato {
         this.color = color;
     }
     
+    /** JD imprimirDetalles
+     * Este método realiza la función de devolver en una línea todos los valores de las variables de la clase zapato.  
+     * @return Devolverá como String un texto junto con los valores de la variable.
+     */
     public String imprimirDetalles () {
-
         return "Los zapatos son de tipo " + tipo + ", de la talla: " + talla + ", del color: " + color + ", existe un stock de: " +  cantidad + ", con un precio de: " + precio + " euros";
-
     }
-
-
-    
 }

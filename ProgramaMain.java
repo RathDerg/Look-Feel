@@ -6,7 +6,7 @@ public class ProgramaMain {
     
     public static void main(String[] args) {
         Scanner sc = new Scanner (System.in);
-        String [] opcionesPrincipal = {"Agregar / Modificar datos de los productos.", "Controlar stock, precios y liquidaciones.", "Salir del programa."};
+        String [] opcionesPrincipal = {"Agregar / Modificar datos de los productos.", "Controlar stock y precios.", "Salir del programa."};
         String [] opcionesAgregar = {"Añadir productos.", "Modificar datos de los productos.", "Imprimir datos de productos.", "Salir al menú principal."};
         String [] opcionesStock = {"Modificar stock de un producto.", "Modificar precio de un producto.", "Salir al menú principal."};
     
