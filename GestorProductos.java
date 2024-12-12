@@ -329,7 +329,7 @@ public class GestorProductos {
      */
     protected void modificarPrecio(Scanner sc) {
         int opcion = 0;
-    
+        System.out.println("---------------------------------");
         do {
         System.out.println("De qué tipo de producto quieres modificar el precio?");
         for (int i = 0; i<menuObjetos.length;i++) {
@@ -397,9 +397,9 @@ public class GestorProductos {
      */
     protected void modificarCantidad(Scanner sc) {
         int opcion = 0;
-    
+        System.out.println("---------------------------------");
         do {
-        System.out.println("De qué tipo de producto quieres modificar el precio?");
+        System.out.println("De qué tipo de producto quieres modificar el cantidad?");
         for (int i = 0; i<menuObjetos.length;i++) {
             System.out.println((i+1) + ". " + menuObjetos[i]);
         }
